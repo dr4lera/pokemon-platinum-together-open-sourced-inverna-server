@@ -9,6 +9,21 @@ and persistent writable storage. Static-site/shared PHP-only hosting will not ru
 The Node backend tests establish protocol behavior and persistence; they do not
 establish complete native gameplay. Read [verification](docs/verification.md).
 
+## Download
+
+**[Download the Inverna hosting bundle — dev9 preview](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-inverna-server/releases/download/v0.1.0-dev.9/PokemonPlatinumTogetherOpenSourced-InvernaServer-dev9.zip)**
+
+The ZIP includes this deployment and its matching shared backend in sibling
+folders. Extract the whole bundle, install Node.js 24.12 or newer, then follow
+[First run](#first-run). Keep the folders together; the default backend path is
+already arranged. Enroll the owner locally before exposing the listener.
+
+[Release notes and SHA-256 checksum](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-inverna-server/releases/tag/v0.1.0-dev.9).
+[All five projects and downloads](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher#downloads).
+The public dev9 build is the **Latest release** and remains a **development preview**.
+The [full Windows launcher bundle](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher#downloads)
+is a separate download. Native city rendering/movement still needs verification.
+
 ## Projects
 
 - [Shared server engine](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-server)
