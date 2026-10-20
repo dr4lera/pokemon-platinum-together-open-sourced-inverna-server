@@ -11,16 +11,16 @@ establish complete native gameplay. Read [verification](docs/verification.md).
 
 ## Download
 
-**[Download the Inverna hosting bundle — dev9 preview](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-inverna-server/releases/download/v0.1.0-dev.9/PokemonPlatinumTogetherOpenSourced-InvernaServer-dev9.zip)**
+**[Download the Inverna hosting bundle — dev11 preview](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-inverna-server/releases/download/v0.1.0-dev.11/PokemonPlatinumTogetherOpenSourced-InvernaServer-dev11.zip)**
 
 The ZIP includes this deployment and its matching shared backend in sibling
 folders. Extract the whole bundle, install Node.js 24.12 or newer, then follow
 [First run](#first-run). Keep the folders together; the default backend path is
 already arranged. Enroll the owner locally before exposing the listener.
 
-[Release notes and SHA-256 checksum](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-inverna-server/releases/tag/v0.1.0-dev.9).
+[Release notes and SHA-256 checksum](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-inverna-server/releases/tag/v0.1.0-dev.11).
 [All five projects and downloads](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher#downloads).
-The public dev9 build is the **Latest release** and remains a **development preview**.
+The public dev11 build is the **Latest release** and remains a **development preview**.
 The [full Windows launcher bundle](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher#downloads)
 is a separate download. Native city rendering/movement still needs verification.
 
@@ -71,6 +71,11 @@ node start.mjs
 Enrollment is once only; it refuses to overwrite an existing profile. Preserve
 that owner profile. It signs local administration requests. To keep public
 clients from reaching startup during enrollment, enroll before starting the backend.
+Use Node 24.12+; older runtimes fail with a version message. Startup rejects
+unknown, duplicate and missing-path options before touching configuration.
+`--check` reads an existing config without creating files/data or a listener;
+copy the example explicitly first. `--help` is read-only.
+
 Start accepts `--backend /path/to/pokemon-platinum-together-open-sourced-server` and `--config /path/server.json`.
 `PT_BACKEND_DIR` is another way to locate the shared engine.
 
