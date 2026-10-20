@@ -1,0 +1,20 @@
+[Unit]
+Description=Plat Together inverna backend
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=platinum
+Group=platinum
+WorkingDirectory=/srv/plat-together-inverna-server
+ExecStart=/usr/bin/node /srv/plat-together-inverna-server/start.mjs
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGTERM
+TimeoutStopSec=30
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

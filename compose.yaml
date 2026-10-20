@@ -1,0 +1,12 @@
+services:
+  inverna:
+    build:
+      context: ../plat-together-server
+      dockerfile: ../plat-together-inverna-server/Dockerfile
+    restart: unless-stopped
+    init: true
+    ports:
+      - "127.0.0.1:8788:8788"
+    volumes:
+      - ./server.json:/config/server.json:ro
+      - ./Data:/config/Data
